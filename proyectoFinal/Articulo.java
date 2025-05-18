@@ -10,12 +10,14 @@ public class Articulo {
 
     //Constructor para inicializar el objeto Articulo
     public Articulo(int id, String nombre, double precio) {
-        this.id = id;                                   //"This" refiere al atributo del objeto
+        this.id = id;                                   //"This" alude al atributo del objeto
         this.nombre = nombre;
         this.precio = precio;
     }
 
     //Getter para el atributo id (Solo lectura)
+    //Public se puede acceder desde cualquier parte del sistema
+    //int es el tipo de dato que devuelve el metodo
     public int getId() {
         return id;
     }
