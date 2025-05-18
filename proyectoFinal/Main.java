@@ -59,7 +59,7 @@ public class Main {
             System.out.println("No hay artículos cargados");
             } else {
                 for (Articulo a : lista) {
-                    a.mostrar();                                             //LLamada poliformica al metodo mostrar()
+                    a.mostrarArticulo();                                             //LLamada poliformica al metodo mostrar()
                 }  
         }
     }    
