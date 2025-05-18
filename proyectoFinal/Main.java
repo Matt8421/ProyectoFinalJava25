@@ -7,7 +7,7 @@ import java.util.Scanner;
 // Clase Principal del programa
 public class Main {
     // Lista que almacena objetos de tipo Articulo
-    static ArrayList<Articulo> lista = new ArrayList<>();
+    static ArrayList<Articulo> lista = new ArrayList<>();  //Atributos de la clase xq tiene la palabra reservada static
     // Scanner para entrada de dator por consola
     static Scanner sc = new Scanner(System.in);
 
@@ -36,12 +36,12 @@ public class Main {
                 default -> System.out.println("Opción invalida");
         }
         } while (opcion != 5);  //Repetir hasta que el usuario elija salir
-    }
+    }                           //Fin del metodo main que ejecuta el programa
 
     //Metodo para crear un nuevo Articulo
     public static void crearArticulo() { 
-        System.out.print("ID: ");
-        int id = sc.nextInt(); sc.nextLine();        //Leer ID del articulo
+        System.out.print("ID: ");                  //Para leer un número entero 
+        int id = sc.nextInt(); sc.nextLine();        //Leer ID del articulo  y sc.nextLine() para leer una línea de texto
         System.out.print("Nombre: ");              
         String nombre = sc.nextLine();               //Leer nombre del articulo
         System.out.print("Precio: ");
@@ -69,8 +69,8 @@ public class Main {
     public static void modificarArticulo() {
         System.out.print("ID del artículo a modificar: ");
         int id = sc.nextInt();
-        for (Articulo articulo : lista) {
-            if (articulo.getId() == id) {
+        for (Articulo articulo : lista) {                             // Recorremos todos los productos almacenados en la lista
+            if (articulo.getId() == id) {                             // Verificamos si el ID del producto actual coincide con el buscado
                 sc.nextLine();
                 System.out.print("Nuevo nombre: ");                //Usar setter para modificar el nombre
                 articulo.setNombre(sc.nextLine());
