@@ -19,13 +19,13 @@ public class Articulo {
     //Public se puede acceder desde cualquier parte del sistema
     //int es el tipo de dato que devuelve el metodo
     public int getId() {
-        return id;
+        return this.id;
     }
     //No uso setter para el ID
 
     //Getter para el atributo nombre
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     //Setter para modificar el atributo nombre
@@ -35,7 +35,7 @@ public class Articulo {
 
     //Getter para el atributo precio
     public double getPrecio() {
-        return precio;
+        return this.precio;
     }
 
     //Setter para modificar el atributo precio
