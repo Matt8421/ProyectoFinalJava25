@@ -21,6 +21,11 @@ public class Articulo extends Producto implements Vendible{
         return this.precio;
     }
 
+    @Override
+    public void setPrecio(double precio) {
+        this.precio = precio;
+}
+
     //Metodo que sobreescribe el metodo abstracto mostrarDetalle() de Producto
     //Este metodo muestra la informacion completa del articulo
     @Override
@@ -39,7 +44,14 @@ public class Articulo extends Producto implements Vendible{
     public double calcularPrecioFinal() {
         return this.precio;
     }
-    
+    @Override
+    public String toString() {
+        return "Articulo{" +
+                "id=" + getId() +
+                ", nombre='" + getNombre() + '\'' +
+                ", precio=" + precio +
+                '}';
+    }
 
     
 

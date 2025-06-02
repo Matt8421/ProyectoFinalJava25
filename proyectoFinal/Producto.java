@@ -11,6 +11,7 @@ public abstract class Producto {
     
     private int id;          //Identificador unico del producto
     private String nombre;   //Nombre del producto
+    protected String descripcion;
 
     //Constructor que recibe el id y el nombre al crear un producto
     public Producto(int id, String nombre) {
@@ -20,13 +21,25 @@ public abstract class Producto {
 
     //Metodo para obtener el id del producto
     public int getId(){
-        return id;
+        return this.id;
     }
 
+    public String getNombre(){
+        return this.nombre;
+    }
     //Metodo para cambiar el nombre del producto
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public String getDescripcion(){
+        return this.descripcion;
+    }
+
+    public void setDescripcion(String descripcion){
+        this.descripcion = descripcion;
+    }
+
 
     //Metodo abstracto: Las clases hijas deberan definir su propia version.
     public abstract void mostrarDetalle();
