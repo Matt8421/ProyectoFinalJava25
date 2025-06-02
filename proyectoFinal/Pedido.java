@@ -1,6 +1,5 @@
+package proyectoFinal;
 import java.util.ArrayList;
-
-import proyectoFinal.Producto;
 
 //Clase que representa un pedido
 public class Pedido {

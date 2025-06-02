@@ -22,6 +22,10 @@ public ProductoTecnologico(int id, String nombre, double precio, String marca){
 public void setMarca(String marca){
     this.marca = marca;
 }
+  // Getter por si más adelante lo necesitamos
+    public String getMarca() {
+        return this.marca;
+    }
 
  //Sobreescribimos el metodo abstracto mostrarDetalle() que viene desde Producto
  //Este metodo muestra en consola toda la info del producto
@@ -35,5 +39,15 @@ public void mostrarDetalle(){
 
     );
 }
+    // Sobrescritura de toString() para mostrar la info del producto
+  @Override
+    public String toString() {
+        return "ProductoTecnologico{" +                                //Reemplazamos "Articulo{" por "ProductoTecnologico{".
+                "id=" + this.getId() +
+                ", nombre='" + this.getNombre() + '\'' +        
+                ", precio=" + this.getPrecio() +                //Evitamos el error de poner ' después de getPrecio() que lo mostraba como texto cuando en realidad es un número.
+                ", Marca=" + this.marca + '\'' +                          //Agregamos comillas en marca porque es un texto (String).
+                '}';
+    }
 
 }
