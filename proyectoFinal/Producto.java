@@ -4,7 +4,7 @@ package proyectoFinal;          //Indica el paquete al que pertenece esta clase
     //lo que significa que no se puede crear una instancia directa de ella.
     //Se usan como modelo para que otras clases las extiendan
 
-public abstract class Producto {
+public abstract class Producto extends Object {
 
     //Atributos comunes a todos los productos
     //Encapsulamiento : Usamos private y métodos get/set para proteger y acceder a los datos.
